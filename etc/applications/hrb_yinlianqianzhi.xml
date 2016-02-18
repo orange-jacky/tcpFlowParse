@@ -1,0 +1,39 @@
+<application>
+        <!--传输协议 base表示传输层协议   ex表示扩展协议,一般是中间件的类型-->
+	<transportProtocol base="tcp" ex=""></transportProtocol>
+        <!--交易数据协议  name是数据协议的名称-->
+        <dataProtocol name="cups"></dataProtocol>
+
+        <!--传输方式  -->
+        <!-- asyn_long_single:异步长连接单工(异步长连接2条链)  asyn_long_full:异步长连接双工(异步长连接1条链)  -->
+        <!-- syn_long:表示同步长连接   syn_short:同步短连接 -->
+        <transportMethod>asyn_long_single</transportMethod>
+
+        <!--输出内容  tcp表示会话层   trans表示交易层    on:表示输出这层数据   off:表示不输出这层数据-->
+        <output tcp="on" trans="off"></output>
+
+        <!--服务端口-->        
+        <serverports>
+                <port>21084</port>
+                <port>23084</port>
+                <port>21359</port>
+                <port>23359</port>
+        </serverports>
+        <!--服务端列表-->        
+        <serverlists>
+                <server>9.234.1.21</server>
+                <server>9.234.1.23</server>
+                <server>30.1.1.31</server>
+                <server>30.1.1.35</server>
+                <server>9.0.32.190</server>
+        </serverlists>
+        <!--客户端列表-->        
+        <clientlists>
+                <client>9.234.1.21</client>
+                <client>9.234.1.23</client>
+                <client>30.1.1.31</client>
+                <client>30.1.1.35</client>
+                <client>9.0.32.190</client>                
+        </clientlists>
+
+</application>

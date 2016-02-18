@@ -1,0 +1,28 @@
+<root>
+    <!-- 配置从哪个网卡抓包-->
+    <interface nic="en0"></interface>
+    <!-- 配置读取哪个pcap文件 -->
+    <!--eg path="/opt/mypcaps" filename="sample.pcap"-->
+    <savefile path="" filename=""></savefile>
+
+    <!--
+    <savefile  path="/Users/fredlee/Downloads/临时文件/005-哈尔滨银行/项目/应用系统/93上抓的" filename="capture_on_eth3-on_93.pcap"></savefile>
+    -->
+    <!-- set pcap filter expression-->
+    <filter string="tcp or(vlan and tcp)"></filter>
+    <!-- 是否打开统抓包统计功能,只有从网卡抓包,这个功能才生效, on表示打开,off表示关闭-->
+    <pcapstat switch="on"></pcapstat>
+
+    <!--统计回话层和交易层数据的时间间隔,单位是秒-->
+    <timeinterval value="10"></timeinterval>
+
+    <!--日志输出级别-->
+    <!--error表示只输出错误信息, warn表示输出不支持功能的信息 info表示输出一些重要的信息,debug表示输出所有调试信息-->
+    <log level="debug" ></log>
+
+    <!--列出有哪些应用,如果要新增一个application的流量,请在下面添加一个application-->
+    <applications>
+        <application name="hrb_yinlianqianzhi"></application>
+    </applications>
+
+</root>

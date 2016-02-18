@@ -1,0 +1,12 @@
+<protocol name="cups">
+	<recodeFields>
+                <field item="f2">PAN</field>
+                <field item="f3">processCode</field>
+                <field item="f7">transmissonTime</field>
+                <field item="f11">systemTraceNumber</field>
+                <field item="f32">acquireInstID</field>
+                <field item="f33">forwardInstID</field>
+                <field item="f38">authResID</field>
+                <field item="f39">resCode</field>      
+	</recodeFields>
+</protocol>
